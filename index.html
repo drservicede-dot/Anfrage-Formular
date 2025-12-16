@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>DR-Service – Reinigungsanfrage</title>
 
-  <link rel="icon" href="./assets/logo/logo-192.png" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="assets/logo/logo-192.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -14,7 +14,7 @@
   <div id="splash" class="splash" aria-hidden="true">
     <div class="splash__bg"></div>
     <div class="splash__card">
-      <img class="splash__logo" src="./assets/logo/logo-512.png" alt="DR-Service" />
+      <img class="splash__logo" src="assets/logo/logo-512.png" alt="DR-Service" />
       <div class="splash__title">DR-Service</div>
       <div class="splash__sub">Professionelle Gebäudereinigung</div>
       <div class="splash__bar" role="progressbar" aria-label="Laden"></div>
@@ -24,7 +24,7 @@
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <img class="brand__logo" src="./assets/logo/logo-192.png" alt="DR-Service" />
+        <img class="brand__logo" src="assets/logo/logo-192.png" alt="DR-Service" />
         <div class="brand__text">
           <div class="brand__name">DR-Service</div>
           <div class="brand__desc">Reinigungsanfrage – Online Formular</div>
@@ -97,6 +97,7 @@
                 <option value="buero">Büros</option>
                 <option value="fitness">Fitnessstudio / Gym</option>
                 <option value="kita">Kindergarten</option>
+                <option value="schule">Schule</option>
                 <option value="sozial">Sozialräume (Produktionshallen)</option>
               </select>
             </label>
@@ -232,138 +233,57 @@
                 </select>
               </label>
 
-              <label class="field">
-                <span>Fläche (m²)</span>
-                <input type="number" name="bu_area" min="0" placeholder="z.B. 150" />
-              </label>
-
-              <label class="field">
-                <span>Anzahl Arbeitsplätze</span>
-                <input type="number" name="bu_workstations" min="0" placeholder="z.B. 12" />
-              </label>
-
-              <label class="field">
-                <span>Anzahl WC</span>
-                <input type="number" name="bu_wc" min="0" placeholder="z.B. 2" />
-              </label>
+              <label class="field"><span>Fläche (m²)</span><input type="number" name="bu_area" min="0" placeholder="z.B. 150" /></label>
+              <label class="field"><span>Anzahl Arbeitsplätze</span><input type="number" name="bu_workstations" min="0" placeholder="z.B. 12" /></label>
+              <label class="field"><span>Anzahl WC</span><input type="number" name="bu_wc" min="0" placeholder="z.B. 2" /></label>
             </div>
 
-            <!-- TU: KAŻDA CZYNNOŚĆ + CZĘSTOTLIWOŚĆ OBOK -->
             <div class="tasklist">
               <div class="taskrow">
-                <label class="taskcheck">
-                  <input type="checkbox" name="bu_task_trash" />
-                  <span>Müll sammeln / entsorgen</span>
-                </label>
+                <label class="taskcheck"><input type="checkbox" name="bu_task_trash" /><span>Müll sammeln / entsorgen</span></label>
                 <select class="freq-select" name="bu_task_trash_freq" data-linked="bu_task_trash">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
-                  <option value="Monatlich">Monatlich</option>
-                  <option value="Nach Bedarf">Nach Bedarf</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Monatlich">Monatlich</option><option value="Nach Bedarf">Nach Bedarf</option>
                 </select>
               </div>
-
               <div class="taskrow">
-                <label class="taskcheck">
-                  <input type="checkbox" name="bu_task_vacuum" />
-                  <span>Staubsaugen</span>
-                </label>
+                <label class="taskcheck"><input type="checkbox" name="bu_task_vacuum" /><span>Staubsaugen</span></label>
                 <select class="freq-select" name="bu_task_vacuum_freq" data-linked="bu_task_vacuum">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
-                  <option value="Monatlich">Monatlich</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Monatlich">Monatlich</option>
                 </select>
               </div>
-
               <div class="taskrow">
-                <label class="taskcheck">
-                  <input type="checkbox" name="bu_task_mopping" />
-                  <span>Boden wischen (nass)</span>
-                </label>
+                <label class="taskcheck"><input type="checkbox" name="bu_task_mopping" /><span>Boden wischen (nass)</span></label>
                 <select class="freq-select" name="bu_task_mopping_freq" data-linked="bu_task_mopping">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
-                  <option value="Monatlich">Monatlich</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Monatlich">Monatlich</option>
                 </select>
               </div>
-
               <div class="taskrow">
-                <label class="taskcheck">
-                  <input type="checkbox" name="bu_task_dusting" />
-                  <span>Staub wischen (Möbel / Oberflächen)</span>
-                </label>
+                <label class="taskcheck"><input type="checkbox" name="bu_task_dusting" /><span>Staub wischen (Möbel / Oberflächen)</span></label>
                 <select class="freq-select" name="bu_task_dusting_freq" data-linked="bu_task_dusting">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
-                  <option value="Monatlich">Monatlich</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Monatlich">Monatlich</option>
                 </select>
               </div>
-
               <div class="taskrow">
-                <label class="taskcheck">
-                  <input type="checkbox" name="bu_task_windows" />
-                  <span>Fenster / Glasflächen reinigen</span>
-                </label>
+                <label class="taskcheck"><input type="checkbox" name="bu_task_windows" /><span>Fenster / Glasflächen reinigen</span></label>
                 <select class="freq-select" name="bu_task_windows_freq" data-linked="bu_task_windows">
-                  <option value="Monatlich">Monatlich</option>
-                  <option value="Alle 2 Monate">Alle 2 Monate</option>
-                  <option value="Quartalsweise">Quartalsweise</option>
-                  <option value="2× pro Jahr">2× pro Jahr</option>
-                  <option value="Nach Bedarf">Nach Bedarf</option>
+                  <option value="Monatlich">Monatlich</option><option value="Alle 2 Monate">Alle 2 Monate</option><option value="Quartalsweise">Quartalsweise</option><option value="2× pro Jahr">2× pro Jahr</option><option value="Nach Bedarf">Nach Bedarf</option>
                 </select>
               </div>
-
               <div class="taskrow">
-                <label class="taskcheck">
-                  <input type="checkbox" name="bu_task_wc" />
-                  <span>WC reinigen</span>
-                </label>
+                <label class="taskcheck"><input type="checkbox" name="bu_task_wc" /><span>WC reinigen</span></label>
                 <select class="freq-select" name="bu_task_wc_freq" data-linked="bu_task_wc">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option>
                 </select>
               </div>
-
               <div class="taskrow">
-                <label class="taskcheck">
-                  <input type="checkbox" name="bu_task_kitchen" />
-                  <span>Küche / Teeküche reinigen</span>
-                </label>
+                <label class="taskcheck"><input type="checkbox" name="bu_task_kitchen" /><span>Küche / Teeküche reinigen</span></label>
                 <select class="freq-select" name="bu_task_kitchen_freq" data-linked="bu_task_kitchen">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
-                  <option value="Monatlich">Monatlich</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Monatlich">Monatlich</option>
                 </select>
               </div>
             </div>
 
-            <label class="field">
-              <span>Zusätzliche Hinweise (optional)</span>
-              <textarea name="bu_extra" rows="4"></textarea>
-            </label>
+            <label class="field"><span>Zusätzliche Hinweise (optional)</span><textarea name="bu_extra" rows="4"></textarea></label>
           </div>
 
           <!-- FITNESS -->
@@ -394,51 +314,31 @@
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="fi_task_wc" /><span>WC reinigen</span></label>
                 <select class="freq-select" name="fi_task_wc_freq" data-linked="fi_task_wc">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="fi_task_showers" /><span>Duschen reinigen</span></label>
                 <select class="freq-select" name="fi_task_showers_freq" data-linked="fi_task_showers">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="fi_task_sauna" /><span>Sauna reinigen</span></label>
                 <select class="freq-select" name="fi_task_sauna_freq" data-linked="fi_task_sauna">
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
-                  <option value="Nach Bedarf">Nach Bedarf</option>
+                  <option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Nach Bedarf">Nach Bedarf</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="fi_task_trash" /><span>Müllentsorgung</span></label>
                 <select class="freq-select" name="fi_task_trash_freq" data-linked="fi_task_trash">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="fi_task_windows" /><span>Fenster / Glas reinigen</span></label>
                 <select class="freq-select" name="fi_task_windows_freq" data-linked="fi_task_windows">
-                  <option value="Monatlich">Monatlich</option>
-                  <option value="Alle 2 Monate">Alle 2 Monate</option>
-                  <option value="Quartalsweise">Quartalsweise</option>
-                  <option value="Nach Bedarf">Nach Bedarf</option>
+                  <option value="Monatlich">Monatlich</option><option value="Alle 2 Monate">Alle 2 Monate</option><option value="Quartalsweise">Quartalsweise</option><option value="Nach Bedarf">Nach Bedarf</option>
                 </select>
               </div>
             </div>
@@ -473,36 +373,133 @@
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="ki_task_disinfection" /><span>Desinfektion (Kontaktflächen)</span></label>
                 <select class="freq-select" name="ki_task_disinfection_freq" data-linked="ki_task_disinfection">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="ki_task_trash" /><span>Müllentsorgung</span></label>
                 <select class="freq-select" name="ki_task_trash_freq" data-linked="ki_task_trash">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="ki_task_windows" /><span>Fenster / Glas reinigen</span></label>
                 <select class="freq-select" name="ki_task_windows_freq" data-linked="ki_task_windows">
-                  <option value="Monatlich">Monatlich</option>
-                  <option value="Alle 2 Monate">Alle 2 Monate</option>
-                  <option value="Quartalsweise">Quartalsweise</option>
-                  <option value="Nach Bedarf">Nach Bedarf</option>
+                  <option value="Monatlich">Monatlich</option><option value="Alle 2 Monate">Alle 2 Monate</option><option value="Quartalsweise">Quartalsweise</option><option value="Nach Bedarf">Nach Bedarf</option>
                 </select>
               </div>
             </div>
 
             <label class="field"><span>Zusätzliche Hinweise (optional)</span><textarea name="ki_extra" rows="4"></textarea></label>
+          </div>
+
+          <!-- SCHULE -->
+          <div class="subform" data-form="schule" hidden>
+            <div class="sectionTitle sectionTitle--small">Schule – Details</div>
+
+            <div class="grid">
+              <label class="field">
+                <span>Grundfrequenz – Schule *</span>
+                <select name="sc_base_frequency" required>
+                  <option value="" disabled selected>Bitte wählen…</option>
+                  <option value="Täglich">Täglich</option>
+                  <option value="3× pro Woche">3× pro Woche</option>
+                  <option value="2× pro Woche">2× pro Woche</option>
+                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Alle 2 Wochen">Alle 2 Wochen</option>
+                  <option value="Monatlich">Monatlich</option>
+                  <option value="Einmalig">Einmalig</option>
+                </select>
+              </label>
+
+              <label class="field"><span>Anzahl Klassenräume</span><input type="number" name="sc_classrooms" min="0" placeholder="z.B. 18" /></label>
+              <label class="field"><span>Aula / Mehrzweckhalle</span><select name="sc_aula"><option value="Nein">Nein</option><option value="Ja">Ja</option></select></label>
+              <label class="field"><span>Sporthalle</span><select name="sc_gym"><option value="Nein">Nein</option><option value="Ja">Ja</option></select></label>
+            </div>
+
+            <div class="grid">
+              <label class="field"><span>Anzahl WC</span><input type="number" name="sc_wc" min="0" placeholder="z.B. 6" /></label>
+              <label class="field"><span>Etagen</span><input type="number" name="sc_floors" min="0" placeholder="z.B. 2" /></label>
+              <label class="field"><span>Mensa / Küche</span><select name="sc_mensa"><option value="Nein">Nein</option><option value="Ja">Ja</option></select></label>
+              <label class="field"><span>Lehrerzimmer / Verwaltung</span><select name="sc_staff_rooms"><option value="Nein">Nein</option><option value="Ja">Ja</option></select></label>
+            </div>
+
+            <div class="tasklist">
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_trash" /><span>Müll sammeln / entsorgen (Klassen, Flure)</span></label>
+                <select class="freq-select" name="sc_task_trash_freq" data-linked="sc_task_trash">
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Nach Bedarf">Nach Bedarf</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_classrooms" /><span>Klassenräume – Boden & Oberflächen (Standard)</span></label>
+                <select class="freq-select" name="sc_task_classrooms_freq" data-linked="sc_task_classrooms">
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_hallways" /><span>Flure / Treppen – Bodenreinigung</span></label>
+                <select class="freq-select" name="sc_task_hallways_freq" data-linked="sc_task_hallways">
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_wc" /><span>WC reinigen (inkl. Material prüfen)</span></label>
+                <select class="freq-select" name="sc_task_wc_freq" data-linked="sc_task_wc">
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_gym" /><span>Sporthalle – Boden / Staub</span></label>
+                <select class="freq-select" name="sc_task_gym_freq" data-linked="sc_task_gym">
+                  <option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Nach Bedarf">Nach Bedarf</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_aula" /><span>Aula / Mehrzweckhalle – Reinigung</span></label>
+                <select class="freq-select" name="sc_task_aula_freq" data-linked="sc_task_aula">
+                  <option value="1× pro Woche">1× pro Woche</option><option value="Alle 2 Wochen">Alle 2 Wochen</option><option value="Monatlich">Monatlich</option><option value="Nach Bedarf">Nach Bedarf</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_dusting" /><span>Staub wischen (Tische, Regale, Möbel)</span></label>
+                <select class="freq-select" name="sc_task_dusting_freq" data-linked="sc_task_dusting">
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Monatlich">Monatlich</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_windows" /><span>Fenster / Glasflächen reinigen</span></label>
+                <select class="freq-select" name="sc_task_windows_freq" data-linked="sc_task_windows">
+                  <option value="Monatlich">Monatlich</option><option value="Alle 2 Monate">Alle 2 Monate</option><option value="Quartalsweise">Quartalsweise</option><option value="2× pro Jahr">2× pro Jahr</option><option value="Nach Bedarf">Nach Bedarf</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_mensa" /><span>Mensa / Küche – Reinigung</span></label>
+                <select class="freq-select" name="sc_task_mensa_freq" data-linked="sc_task_mensa">
+                  <option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Nach Bedarf">Nach Bedarf</option>
+                </select>
+              </div>
+
+              <div class="taskrow">
+                <label class="taskcheck"><input type="checkbox" name="sc_task_staff" /><span>Lehrerzimmer / Verwaltung – Reinigung</span></label>
+                <select class="freq-select" name="sc_task_staff_freq" data-linked="sc_task_staff">
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
+                </select>
+              </div>
+            </div>
+
+            <label class="field">
+              <span>Zusätzliche Hinweise (optional)</span>
+              <textarea name="sc_extra" rows="4" placeholder="z.B. Unterrichtszeiten, Ferien, besondere Bereiche…"></textarea>
+            </label>
           </div>
 
           <!-- SOZIALRÄUME -->
@@ -533,41 +530,25 @@
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="so_task_wc" /><span>WC reinigen</span></label>
                 <select class="freq-select" name="so_task_wc_freq" data-linked="so_task_wc">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="3× pro Woche">3× pro Woche</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="3× pro Woche">3× pro Woche</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="so_task_showers" /><span>Duschen reinigen</span></label>
                 <select class="freq-select" name="so_task_showers_freq" data-linked="so_task_showers">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="so_task_trash" /><span>Müllentsorgung</span></label>
                 <select class="freq-select" name="so_task_trash_freq" data-linked="so_task_trash">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="Täglich">Täglich</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="Täglich">Täglich</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option>
                 </select>
               </div>
-
               <div class="taskrow">
                 <label class="taskcheck"><input type="checkbox" name="so_task_heavy" /><span>Starke Verschmutzung (Produktion) – Extra</span></label>
                 <select class="freq-select" name="so_task_heavy_freq" data-linked="so_task_heavy">
-                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option>
-                  <option value="2× pro Woche">2× pro Woche</option>
-                  <option value="1× pro Woche">1× pro Woche</option>
-                  <option value="Nach Bedarf">Nach Bedarf</option>
+                  <option value="Wie Grundfrequenz">Wie Grundfrequenz</option><option value="2× pro Woche">2× pro Woche</option><option value="1× pro Woche">1× pro Woche</option><option value="Nach Bedarf">Nach Bedarf</option>
                 </select>
               </div>
             </div>
@@ -595,6 +576,6 @@
     </main>
   </div>
 
-  <script src="./app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

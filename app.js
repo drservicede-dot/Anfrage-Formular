@@ -20,21 +20,22 @@ function showSubform(key) {
     sf.hidden = !active;
     sf.querySelectorAll("input, select, textarea").forEach(el => (el.disabled = !active));
   });
-  syncTaskFrequencies(); // po przełączeniu obiektu
+  syncTaskFrequencies();
 }
 
-/* CHECKBOX → włącz/wyłącz select częstotliwości obok */
+/* checkbox → aktywuje select obok */
 function syncTaskFrequencies() {
   $$(".freq-select").forEach(sel => {
     const linkedName = sel.getAttribute("data-linked");
     const cb = linkedName ? document.querySelector(`input[type="checkbox"][name="${linkedName}"]`) : null;
     if (!cb) return;
-    sel.disabled = !cb.checked || sel.closest(".subform")?.hidden === true;
+    const inHiddenSubform = sel.closest(".subform")?.hidden === true;
+    sel.disabled = inHiddenSubform || !cb.checked;
   });
 }
 
+/* SPLASH 4 sekundy */
 window.addEventListener("load", () => {
-  // SPLASH – 4 Sekunden
   setTimeout(() => $("#splash")?.classList.add("is-hidden"), 4000);
   syncTaskFrequencies();
 });
@@ -50,11 +51,9 @@ $("#resetBtn").addEventListener("click", () => {
   syncTaskFrequencies();
 });
 
-/* delegacja: jak zmienisz checkbox → od razu aktywuje select obok */
+/* delegacja: checkbox change */
 $("#clientForm").addEventListener("change", (e) => {
-  if (e.target && e.target.matches('input[type="checkbox"]')) {
-    syncTaskFrequencies();
-  }
+  if (e.target && e.target.matches('input[type="checkbox"]')) syncTaskFrequencies();
 });
 
 $("#clientForm").addEventListener("submit", async (e) => {
@@ -68,7 +67,6 @@ $("#clientForm").addEventListener("submit", async (e) => {
     return;
   }
 
-  // zbieramy tylko aktywne (nieaktywne subformy są disabled)
   const fd = new FormData(form);
   const payload = {};
   for (const [k, v] of fd.entries()) payload[k] = v;

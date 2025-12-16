@@ -10,8 +10,6 @@
   --muted:#6b6b6b;
 
   --stroke:rgba(0,0,0,0.12);
-  --focus:rgba(175,130,0,0.35);
-
   --radius:18px;
   --shadow:0 14px 35px rgba(0,0,0,0.12);
 
@@ -101,6 +99,7 @@ body{
   font-size:13px;
 }
 .taskcheck input{width:18px;height:18px}
+.freq-select:disabled{opacity:.55}
 
 /* SPLASH */
 .splash{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:9999}
@@ -113,7 +112,7 @@ body{
 }
 .splash__bg::after{
   content:""; position:absolute; inset:0;
-  background-image: url("./assets/background/background.jpg");
+  background-image: url("assets/background/background.jpg");
   background-size: cover; background-position: center;
   opacity:.22; mix-blend-mode:multiply;
 }
